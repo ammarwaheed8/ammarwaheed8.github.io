@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Portfolio — Creative Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/index.css">
+  
+</head>
+<body>
+
+<!-- Cursor glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Page transition overlay -->
+<div class="page-transition" id="pageTransition"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="nav-logo" onclick="navigate('home')">Port<span>folio</span></div>
+
+  <ul class="nav-links">
+    <li><a onclick="navigate('home')" data-page="home" class="active">Home</a></li>
+    <li><a onclick="navigate('about')" data-page="about">About</a></li>
+    <li><a onclick="navigate('services')" data-page="services">Services</a></li>
+    <li><a onclick="navigate('portfolio')" data-page="portfolio">Portfolio</a></li>
+    <li><a onclick="navigate('contact')" data-page="contact" class="nav-cta">Hire Me</a></li>
+  </ul>
+
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="navigate('home'); toggleMenu()" data-page="home">Home</a>
+  <a onclick="navigate('about'); toggleMenu()" data-page="about">About</a>
+  <a onclick="navigate('services'); toggleMenu()" data-page="services">Services</a>
+  <a onclick="navigate('portfolio'); toggleMenu()" data-page="portfolio">Portfolio</a>
+  <a onclick="navigate('contact'); toggleMenu()" data-page="contact">Hire Me</a>
+</div>
+
+<!-- ===== HOME PAGE ===== -->
+<section class="page active" id="home">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <div class="home-content">
+    <div class="home-text">
+      <div class="home-badge">
+        <span class="dot"></span>
+        Available for freelance work
+      </div>
+
+      <h1 class="home-title">
+        Creative<br>
+        <span class="highlight">Developer</span><br>
+        & Designer
+      </h1>
+
+      <p class="home-sub">
+        I craft beautiful, high-performance digital experiences — from pixel-perfect interfaces to scalable full-stack applications.
+      </p>
+
+      <div class="home-actions">
+        <button class="btn-primary" onclick="navigate('portfolio')">
+          View My Work
+          <span class="arrow">→</span>
+        </button>
+        <button class="btn-ghost" onclick="navigate('contact')">
+          Let's Talk
+        </button>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Projects Done</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Years Exp.</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">30+</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-visual">
+      <div class="portrait-wrapper">
+        <div class="portrait-ring"></div>
+        <div class="portrait-ring-inner"></div>
+        <div class="portrait-img">
+          <!-- Stylized avatar placeholder -->
+          <svg class="portrait-placeholder" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="75" r="45" fill="rgba(123,47,190,0.6)"/>
+            <ellipse cx="100" cy="175" rx="70" ry="55" fill="rgba(90,31,140,0.5)"/>
+            <circle cx="100" cy="75" r="35" fill="rgba(155,89,208,0.4)"/>
+          </svg>
+        </div>
+
+        <div class="float-chip chip-1">
+          <span class="chip-icon">💻</span> Full-Stack Dev
+        </div>
+        <div class="float-chip chip-2">
+          <span class="chip-icon">🎨</span> UI/UX Design
+        </div>
+        <div class="float-chip chip-3">
+          <span class="chip-icon">⚡</span> WordPress
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT PAGE ===== -->
+<section class="page" id="about">
+  <div class="container">
+    <div class="section-label">About Me</div>
+    <h2 class="section-title reveal">The person<br>behind the work</h2>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="reveal">I'm a passionate <strong>full-stack developer and UI/UX designer</strong> with over 5 years of experience building beautiful, user-centric digital products. I specialize in turning complex problems into clean, elegant solutions.</p>
+        <p class="reveal reveal-delay-1">My approach combines strong technical foundations with a keen eye for design — ensuring that everything I build not only works flawlessly, but feels genuinely delightful to use.</p>
+        <p class="reveal reveal-delay-2">When I'm not coding, I'm exploring new design trends, contributing to open source, or mentoring junior developers.</p>
+
+        <div class="skills-list reveal reveal-delay-3">
+          <span class="skill-tag">JavaScript / TypeScript</span>
+          <span class="skill-tag">React / Next.js</span>
+          <span class="skill-tag">Node.js / Express</span>
+          <span class="skill-tag">WordPress / PHP</span>
+          <span class="skill-tag">Figma / Adobe XD</span>
+          <span class="skill-tag">MySQL / MongoDB</span>
+          <span class="skill-tag">Tailwind / SCSS</span>
+          <span class="skill-tag">Git / CI/CD</span>
+        </div>
+
+        <div class="timeline reveal" style="margin-top:2.5rem">
+          <div class="timeline-item">
+            <div class="timeline-date">2022 – Present</div>
+            <div class="timeline-role">Senior Frontend Developer</div>
+            <div class="timeline-company">TechCorp Solutions</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2020 – 2022</div>
+            <div class="timeline-role">UI/UX Designer & Developer</div>
+            <div class="timeline-company">Creative Agency Co.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2019 – 2020</div>
+            <div class="timeline-role">Junior Web Developer</div>
+            <div class="timeline-company">Freelance</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="skill-bars reveal">
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Frontend Development</span>
+              <span class="skill-bar-pct">95%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width:95%"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">UI/UX Design</span>
+              <span class="skill-bar-pct">88%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width:88%"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Backend / Node.js</span>
+              <span class="skill-bar-pct">80%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width:80%"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">WordPress / PHP</span>
+              <span class="skill-bar-pct">85%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width:85%"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">React / Next.js</span>
+              <span class="skill-bar-pct">92%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width:92%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:2.5rem; display:flex; gap:1rem; flex-wrap:wrap;" class="reveal reveal-delay-2">
+          <button class="btn-primary" onclick="navigate('contact')">Get In Touch →</button>
+          <a class="btn-ghost" href="#" onclick="return false">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES PAGE ===== -->
+<section class="page" id="services">
+  <div class="container">
+    <div class="services-intro">
+      <div class="section-label">What I Do</div>
+      <h2 class="section-title reveal">Services I<br>offer for you</h2>
+      <p class="reveal reveal-delay-1">From concept to launch — I deliver end-to-end digital solutions that make a lasting impression and drive real results.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">💻</div>
+        <h3 class="service-title">Web Development</h3>
+        <p class="service-desc">Building fast, accessible, and scalable web applications using modern technologies and best practices.</p>
+        <div class="service-tags">
+          <span class="service-tag">React</span>
+          <span class="service-tag">Next.js</span>
+          <span class="service-tag">Node.js</span>
+          <span class="service-tag">TypeScript</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">🎨</div>
+        <h3 class="service-title">UI/UX Design</h3>
+        <p class="service-desc">Crafting intuitive, beautiful interfaces through research-driven design that users genuinely love.</p>
+        <div class="service-tags">
+          <span class="service-tag">Figma</span>
+          <span class="service-tag">Prototyping</span>
+          <span class="service-tag">User Research</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">🔧</div>
+        <h3 class="service-title">Full-Stack Apps</h3>
+        <p class="service-desc">End-to-end application development — from database architecture to responsive frontend interfaces.</p>
+        <div class="service-tags">
+          <span class="service-tag">REST APIs</span>
+          <span class="service-tag">GraphQL</span>
+          <span class="service-tag">MongoDB</span>
+          <span class="service-tag">MySQL</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">📝</div>
+        <h3 class="service-title">WordPress</h3>
+        <p class="service-desc">Custom themes, plugins, and performance-optimized WordPress solutions tailored to your brand.</p>
+        <div class="service-tags">
+          <span class="service-tag">Custom Themes</span>
+          <span class="service-tag">Plugins</span>
+          <span class="service-tag">WooCommerce</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="process-section">
+      <div class="section-label reveal">My Process</div>
+      <h2 class="section-title reveal reveal-delay-1" style="font-size:clamp(1.5rem,4vw,2.2rem)">How I work</h2>
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <div class="process-num">01</div>
+          <div class="process-title">Discovery</div>
+          <div class="process-desc">Understanding your goals, audience, and project requirements thoroughly.</div>
+        </div>
+        <div class="process-step reveal reveal-delay-1">
+          <div class="process-num">02</div>
+          <div class="process-title">Design</div>
+          <div class="process-desc">Creating wireframes, prototypes, and visual designs for feedback.</div>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+          <div class="process-num">03</div>
+          <div class="process-title">Develop</div>
+          <div class="process-desc">Building the product with clean code, tested and optimized.</div>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+          <div class="process-num">04</div>
+          <div class="process-title">Launch</div>
+          <div class="process-desc">Deploying and supporting your product for long-term success.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO PAGE ===== -->
+<section class="page" id="portfolio">
+  <div class="container">
+    <div class="portfolio-header">
+      <div>
+        <div class="section-label">My Work</div>
+        <h2 class="section-title reveal">Featured<br>Projects</h2>
+      </div>
+      <div class="filter-tabs reveal">
+        <button class="filter-tab active" onclick="filterProjects('all', this)">All</button>
+        <button class="filter-tab" onclick="filterProjects('web', this)">Web Dev</button>
+        <button class="filter-tab" onclick="filterProjects('design', this)">Design</button>
+        <button class="filter-tab" onclick="filterProjects('wp', this)">WordPress</button>
+      </div>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+      <div class="project-card reveal" data-cat="web">
+        <div class="project-thumb">
+          <div class="project-thumb-bg" style="background:linear-gradient(135deg,#7B2FBE,#0E0814)"></div>
+          <div class="project-number">01</div>
+          <div class="project-overlay">
+            <button class="project-overlay-btn">Live Demo</button>
+            <button class="project-overlay-btn">GitHub</button>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-category">Web Application</div>
+          <div class="project-name">E-Commerce Platform</div>
+          <div class="project-desc">A full-featured online store with cart, payments, and admin dashboard.</div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1" data-cat="design">
+        <div class="project-thumb">
+          <div class="project-thumb-bg" style="background:linear-gradient(135deg,#c084fc,#1E1430)"></div>
+          <div class="project-number">02</div>
+          <div class="project-overlay">
+            <button class="project-overlay-btn">Live Demo</button>
+            <button class="project-overlay-btn">Dribbble</button>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-category">UI/UX Design</div>
+          <div class="project-name">Finance App Redesign</div>
+          <div class="project-desc">Complete UX overhaul resulting in 40% improvement in user engagement.</div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2" data-cat="wp">
+        <div class="project-thumb">
+          <div class="project-thumb-bg" style="background:linear-gradient(135deg,#5A1F8C,#160E22)"></div>
+          <div class="project-number">03</div>
+          <div class="project-overlay">
+            <button class="project-overlay-btn">Live Site</button>
+            <button class="project-overlay-btn">Details</button>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-category">WordPress</div>
+          <div class="project-name">Corporate Website</div>
+          <div class="project-desc">Custom WordPress theme with advanced custom fields and WooCommerce integration.</div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="web">
+        <div class="project-thumb">
+          <div class="project-thumb-bg" style="background:linear-gradient(135deg,#9B59D0,#0E0814)"></div>
+          <div class="project-number">04</div>
+          <div class="project-overlay">
+            <button class="project-overlay-btn">Live Demo</button>
+            <button class="project-overlay-btn">GitHub</button>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-category">Web Application</div>
+          <div class="project-name">SaaS Dashboard</div>
+          <div class="project-desc">Analytics dashboard with real-time data visualization and team management.</div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1" data-cat="design">
+        <div class="project-thumb">
+          <div class="project-thumb-bg" style="background:linear-gradient(135deg,#7B2FBE,#c084fc)"></div>
+          <div class="project-number">05</div>
+          <div class="project-overlay">
+            <button class="project-overlay-btn">Live Demo</button>
+            <button class="project-overlay-btn">Behance</button>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-category">Branding & Design</div>
+          <div class="project-name">Brand Identity System</div>
+          <div class="project-desc">Complete visual identity including logo, typography, color system, and guidelines.</div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2" data-cat="wp">
+        <div class="project-thumb">
+          <div class="project-thumb-bg" style="background:linear-gradient(135deg,#5A1F8C,#9B59D0)"></div>
+          <div class="project-number">06</div>
+          <div class="project-overlay">
+            <button class="project-overlay-btn">Live Site</button>
+            <button class="project-overlay-btn">Details</button>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-category">WordPress / E-Commerce</div>
+          <div class="project-name">Online Fashion Store</div>
+          <div class="project-desc">WooCommerce store with custom product configurator and loyalty program.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT PAGE ===== -->
+<section class="page" id="contact">
+  <div class="container">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title reveal">Let's work<br>together</h2>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p class="reveal">Have a project in mind or just want to say hello? I'm always open to discussing new opportunities and creative ideas.</p>
+
+        <div class="contact-links reveal reveal-delay-1">
+          <a class="contact-link" href="mailto:hello@portfolio.dev">
+            <div class="contact-link-icon">✉️</div>
+            <div class="contact-link-text">
+              <div class="contact-link-label">Email</div>
+              <div class="contact-link-value">hello@portfolio.dev</div>
+            </div>
+          </a>
+          <a class="contact-link" href="tel:+1234567890">
+            <div class="contact-link-icon">📱</div>
+            <div class="contact-link-text">
+              <div class="contact-link-label">Phone</div>
+              <div class="contact-link-value">+1 (234) 567-890</div>
+            </div>
+          </a>
+          <a class="contact-link" href="#">
+            <div class="contact-link-icon">💼</div>
+            <div class="contact-link-text">
+              <div class="contact-link-label">LinkedIn</div>
+              <div class="contact-link-value">linkedin.com/in/portfolio</div>
+            </div>
+          </a>
+          <a class="contact-link" href="#">
+            <div class="contact-link-icon">🐙</div>
+            <div class="contact-link-text">
+              <div class="contact-link-label">GitHub</div>
+              <div class="contact-link-value">github.com/portfolio</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form reveal reveal-delay-2">
+        <form action="https://api.web3forms.com/submit" method="POST" id="formContent">
+          <input type="hidden" name="access_key" value="75b98f05-7ad0-443d-aa8c-3f3815574c68">
+          <div class="form-title">Send a message 👋</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <input class="form-input" type="text" placeholder="Ammar" name="name" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input class="form-input" type="text" placeholder="Waheed" name="name" required/>
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom:1rem">
+            <label class="form-label">Email Address</label>
+            <input class="form-input" type="email" placeholder="ammar@example.com" name="email" required/>
+          </div>
+          <div class="form-group" style="margin-bottom:1rem">
+            <label class="form-label">Budget</label>
+            <input class="form-input" type="number" name="number" placeholder="Your Budget for the Project in $" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" name="message" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <input type="hidden" name="redirect" value="https://youtube.com/">
+          <button type="submit" class="form-submit" onclick="submitForm()">Send Message ✈️</button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="form-success-icon">🎉</div>
+          <h3 style="font-family:var(--font-display);font-size:1.3rem;margin-bottom:.75rem">Message Sent!</h3>
+          <p>Thanks for reaching out. I'll get back to you within 24 hours.</p>
+          <button class="btn-primary" style="margin-top:1.5rem" onclick="resetForm()">Send Another</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>Designed & Built with <span>♥</span> — &copy; 2025 Portfolio. All rights reserved.</p>
+</footer>
+
+<!-- Back to top -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="JS/index.js"></script>
+</body>
+</html>
