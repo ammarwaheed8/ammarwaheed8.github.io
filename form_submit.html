@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Message Sent — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/form_submit.css">
+  
+</head>
+<body>
+
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <div class="card">
+
+    <!-- Spinning icon -->
+    <div class="icon-wrap">
+      <div class="icon-ring"></div>
+      <div class="icon-ring-inner"></div>
+      <div class="icon-inner">✉️</div>
+      <div class="confetti">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- Status badge -->
+    <div class="status-label">
+      <span class="status-dot"></span>
+      Message Delivered
+    </div>
+
+    <!-- Heading -->
+    <h1>Your message<br>is on its <span class="highlight">way!</span></h1>
+
+    <!-- Body -->
+    <p class="body-text">
+      Thanks for reaching out — I've received your message and will get back to you within <strong style="color:var(--white)">24 hours</strong>. Looking forward to connecting!
+    </p>
+
+    <!-- Detail rows -->
+    <div class="details">
+      <div class="detail-row">
+        <div class="detail-icon">⏱️</div>
+        <div>
+          <div class="detail-label">Response Time</div>
+          <div class="detail-value">Within 24 hours</div>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-icon">📬</div>
+        <div>
+          <div class="detail-label">Reply Via</div>
+          <div class="detail-value">hello@portfolio.dev</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <a href="index.html" class="btn-primary">
+        Back to Portfolio <span class="arrow">→</span>
+      </a>
+      <a href="index.html" class="btn-ghost" onclick="sessionStorage.setItem('goTo','contact');return true;">
+        Send Another
+      </a>
+    </div>
+
+  </div>
+
+  <p class="footer-note">
+    Need urgent help? Email directly at <a href="mailto:ammarwaheed8@yahoo.com">ammarwaheed8@yahoo.com</a>
+  </p>
+
+  <script src="JS/form_submit.js"></script>
+</body>
+</html>
