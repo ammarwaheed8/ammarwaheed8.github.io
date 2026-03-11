@@ -7,9 +7,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="CSS/index.css">
+  <link rel="stylesheet" href="CSS/loader.css">
   
 </head>
 <body>
+
+<!-- ===== PAGE LOADER ===== -->
+<div id="aw-loader">
+  <div class="loader-logo">
+    <span class="loader-logo-letter letter-a">A</span>
+    <div class="loader-logo-divider"></div>
+    <span class="loader-logo-letter letter-w">W</span>
+  </div>
+  <div class="loader-bar-wrap">
+    <div class="loader-bar-track">
+      <div class="loader-bar-fill" id="loader-bar-fill"></div>
+    </div>
+    <div class="loader-bar-label" id="loader-bar-label">0%</div>
+  </div>
+</div>
+<!-- ===== END LOADER ===== -->
 
 <!-- Cursor glow -->
 <div class="cursor-glow" id="cursorGlow"></div>
@@ -18,7 +35,13 @@
 <div class="scroll-progress" id="scrollProgress"></div>
 
 <!-- Page transition overlay -->
-<div class="page-transition" id="pageTransition"></div>
+<div class="page-transition" id="pageTransition">
+  <div class="pt-logo">
+    <span class="pt-logo-letter pt-a">A</span>
+    <div class="pt-logo-divider"></div>
+    <span class="pt-logo-letter pt-w">W</span>
+  </div>
+</div>
 
 <!-- ===== NAVBAR ===== -->
 <nav id="navbar">
@@ -518,6 +541,7 @@
 <!-- Back to top -->
 <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
+<script src="JS/loader.js"></script>
 <script src="JS/index.js"></script>
 </body>
 </html>
