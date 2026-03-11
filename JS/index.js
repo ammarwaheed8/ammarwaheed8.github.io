@@ -128,13 +128,24 @@
 
   /* ===== INIT ===== */
   document.addEventListener('DOMContentLoaded', () => {
-    // Activate home page
+    // Activate home page (makes it display:flex but keeps opacity:0)
     const home = document.getElementById('home');
     home.classList.add('active');
-    setTimeout(() => {
-      home.classList.add('visible');
-      observeReveals();
-    }, 50);
+
+    // Wait for loader to finish before revealing content
+    function revealHome() {
+      setTimeout(() => {
+        home.classList.add('visible');
+        observeReveals();
+      }, 50);
+    }
+
+    // If loader exists, wait for it to dispatch 'loaderDone', else reveal immediately
+    if (document.getElementById('aw-loader')) {
+      window.addEventListener('loaderDone', revealHome, { once: true });
+    } else {
+      revealHome();
+    }
   });
 
 
